@@ -5,7 +5,7 @@ class BaseError implements Exception {
 
   @override
   String toString() {
-    // TODO: implement toString
-    return "Error Message=$message";
+   
+    return 'Error Message=$message';
   }
 }
