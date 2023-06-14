@@ -1,6 +1,6 @@
-import 'package:network_management/core/enum/dio_type.dart';
-import 'package:network_management/core/model/base_model.dart';
-import 'package:network_management/core/service/core_service.dart';
+import '../core/enum/dio_type.dart';
+import '../core/model/base_model.dart';
+import '../core/service/core_service.dart';
 
 class Test {
   void test() {

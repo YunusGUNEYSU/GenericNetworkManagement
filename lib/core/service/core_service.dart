@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
-import 'package:network_management/core/enum/dio_type.dart';
-import 'package:network_management/core/error/base_error.dart';
-import 'package:network_management/core/model/base_model.dart';
+import '../enum/dio_type.dart';
+import '../error/base_error.dart';
+import '../model/base_model.dart';
 
 class CoreService {
   late final Dio _dio;
