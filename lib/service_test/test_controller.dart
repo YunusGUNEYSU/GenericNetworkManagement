@@ -1,4 +1,4 @@
-import '../core/enum/dio_type.dart';
+import '../core/constants/enum/dio_type.dart';
 import '../core/service/core_service.dart';
 import 'model/test_model.dart';
 
@@ -7,8 +7,9 @@ class Test {
     // ignore: unused_local_variable
     final result = CoreService.instance.fetcData<YourModel>(
       path: 'aa',
-      requestType: DioType.post,
+      requestType: DioType.get,
       baseModel: YourModel(),
+     
     );
   }
 }
