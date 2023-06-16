@@ -14,22 +14,22 @@ class CoreService {
     _dio = Dio(
       BaseOptions(
         baseUrl: ServiceConstants.baseUrl,
-        connectTimeout:const Duration(seconds: 5),
+        connectTimeout: const Duration(seconds: 5),
         receiveTimeout: const Duration(seconds: 3),
-        contentType:Headers.jsonContentType,
+        contentType: Headers.jsonContentType,
         responseType: ResponseType.json,
       ),
     );
   }
   late final Dio _dio;
   Dio get service => _dio;
-  
+
   static final CoreService instance = CoreService._init();
 
   // ignore: strict_raw_type, lines_longer_than_80_chars
-  Future  fetcData<T extends IBaseModel>({
+  Future fetcData<T extends IBaseModel>({
     required String path,
-    required IBaseModel baseModel,
+    required IBaseModel model,
     required DioType requestType,
     Map<String, dynamic>? data,
   }) async {
@@ -41,8 +41,8 @@ class CoreService {
             method: requestType.dioType,
           ));
 
-      if (response.statusCode==HttpStatus.ok||response.statusCode==HttpStatus.created) {
-          DioHelper.helperCase(response, baseModel);
+      if (response.statusCode == HttpStatus.ok || response.statusCode == HttpStatus.created) {
+        return DioHelper.helperCase(response, model);
       }
     } on BaseError catch (e) {
       if (kDebugMode) {

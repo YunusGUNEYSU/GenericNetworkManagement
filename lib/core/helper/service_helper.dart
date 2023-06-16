@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
+
 import '../model/base_model.dart';
+
 
 class DioHelper {
   DioHelper._();
@@ -10,5 +12,6 @@ class DioHelper {
     } else if (jsonBody is Map<String, dynamic>) {
       return model.fromJson(jsonBody);
     }
+    return jsonBody;
   }
 }

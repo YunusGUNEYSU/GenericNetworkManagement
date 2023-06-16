@@ -7,9 +7,15 @@ part of 'test_model.dart';
 // **************************************************************************
 
 YourModel _$YourModelFromJson(Map<String, dynamic> json) => YourModel(
-      name: json['name'] as String?,
+      id: json['id'] as int?,
+      body: json['body'] as String?,
+      title: json['title'] as String?,
+      userId: json['userId'] as int?,
     );
 
 Map<String, dynamic> _$YourModelToJson(YourModel instance) => <String, dynamic>{
-      'name': instance.name,
+      'userId': instance.userId,
+      'id': instance.id,
+      'title': instance.title,
+      'body': instance.body,
     };

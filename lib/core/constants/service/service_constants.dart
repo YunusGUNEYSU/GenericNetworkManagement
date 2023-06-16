@@ -1,4 +1,4 @@
 class ServiceConstants {
   ServiceConstants._();
-  static const String baseUrl = 'https://pub.dev/';
+  static const String baseUrl = 'https://jsonplaceholder.typicode.com/';
 }

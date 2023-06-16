@@ -9,11 +9,12 @@ part 'test_model.g.dart';
 
 @JsonSerializable()
 class YourModel extends IBaseModel {
-   String? name;
+  int? userId;
+  int? id;
+  String? title;
+  String? body;
 
-  YourModel({
-    this.name,
-  });
+  YourModel({this.id, this.body, this.title, this.userId});
 
   factory YourModel.fromJson(Map<String, dynamic> json) => _$YourModelFromJson(json);
 
@@ -22,6 +23,6 @@ class YourModel extends IBaseModel {
 
   @override
   fromJson(Map<String, dynamic> json) {
-    YourModel.fromJson(json);
+    return _$YourModelFromJson(json);
   }
 }
